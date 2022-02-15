@@ -1,6 +1,6 @@
 import React from "react"
-import { Carousel } from "react-responsive-carousel"
 import { StaticImage } from "gatsby-plugin-image"
+import { Carousel } from "react-responsive-carousel"
 import { HeroContainer } from "../elements"
 
 export const Hero = () => {
@@ -47,10 +47,9 @@ export const Hero = () => {
           className="hero-img"
         />
       </Carousel>
-
       <div className="tagline">
-        <h2>Abby Road</h2>
-        <h3>New website under construction!</h3>
+        <h2>Welcome</h2>
+        <h3>We offer top of the line smoking essentials</h3>
       </div>
     </HeroContainer>
   )

@@ -45,7 +45,7 @@ export const locations = [
         layout="fullWidth"
       />,
     ],
-    name: "AR Maumelle",
+    name: "Maumelle",
     phone: "(501) 400-8358",
     phonelink: "5014008358",
     address: "9807 Maumelle Blvd, Maumelle, AR 72113",
@@ -53,6 +53,7 @@ export const locations = [
     lat: "34.82258309493743",
     lng: "-92.37022047994269",
     active: false,
+    slug: "maumelle",
   },
   {
     id: uuidv4(),
@@ -91,7 +92,7 @@ export const locations = [
         layout="fullWidth"
       />,
     ],
-    name: "AR University Ave",
+    name: "University Ave",
     phone: "(501) 614-6400",
     phonelink: "5016146400",
     address: "1400 S University Ave J, Little Rock, AR 72204",
@@ -99,6 +100,7 @@ export const locations = [
     lat: "34.73889731200156",
     lng: "-92.34197102973047",
     active: false,
+    slug: "university",
   },
   {
     id: uuidv4(),
@@ -152,7 +154,7 @@ export const locations = [
         layout="fullWidth"
       />,
     ],
-    name: "AR Otter Creek",
+    name: "Otter Creek",
     phone: "(501) 476-3177",
     phonelink: "5014763177",
     address: "10400 Stagecoach Rd, Little Rock, AR 72210",
@@ -164,6 +166,36 @@ export const locations = [
     lat: "34.65672750263045",
     lng: "-92.42679890133392",
     active: false,
+    slug: "otter-creek",
+  },
+  {
+    id: uuidv4(),
+    googlePlaceId: process.env.GATSBY_CABOT_ID,
+    img: (
+      <StaticImage
+        src="../images/image-placeholder.png"
+        alt="Cabot Store"
+        layout="fixed"
+        width={200}
+        height={200}
+        style={{ justifySelf: "center" }}
+        transformOptions={{ trim: 10 }}
+      />
+    ),
+    gallery: [],
+    name: "Cabot",
+    phone: "",
+    phonelink: "",
+    address: "2006 South Pine St, Cabot, AR 72023",
+    hours: [
+      "Sun: 12pm - 7pm",
+      "Mon - Thurs: 9am - 8pm",
+      "Fri & Sat: 9am - 9pm",
+    ],
+    lat: "34.943645606008616",
+    lng: "-92.00911183761357",
+    active: false,
+    slug: "cabot",
   },
   {
     id: uuidv4(),
@@ -171,14 +203,16 @@ export const locations = [
     img: (
       <StaticImage
         src="../images/image-placeholder.png"
-        alt="AR Sherwood Store"
+        alt="Sherwood Store"
         layout="fixed"
         width={200}
         height={200}
+        style={{ justifySelf: "center" }}
+        transformOptions={{ trim: 10 }}
       />
     ),
     gallery: [],
-    name: "AR Sherwood",
+    name: "Sherwood",
     phone: "(501) 819-6954",
     phonelink: "5018196954",
     address: "3920 E Kiehl Ave #1, Sherwood, AR 72120",
@@ -190,20 +224,23 @@ export const locations = [
     lat: "34.83185459399566",
     lng: "-92.18920150531893",
     active: false,
+    slug: "sherwood",
   },
   {
     id: uuidv4(),
     img: (
       <StaticImage
         src="../images/image-placeholder.png"
-        alt="AR Jacksonville Store"
+        alt="Jacksonville Store"
         layout="fixed"
         width={200}
         height={200}
+        style={{ justifySelf: "center" }}
+        transformOptions={{ trim: 10 }}
       />
     ),
     gallery: [],
-    name: "AR Jacksonville",
+    name: "Jacksonville",
     phone: "",
     phonelink: "",
     address: "640 W Main St #640, Jacksonville, AR 72076",
@@ -215,6 +252,7 @@ export const locations = [
     lat: "34.86841286319381",
     lng: "-92.11741122422272",
     active: false,
+    slug: "jacksonville",
   },
   {
     id: uuidv4(),
@@ -226,10 +264,12 @@ export const locations = [
         layout="fixed"
         width={200}
         height={200}
+        style={{ justifySelf: "center" }}
+        transformOptions={{ trim: 10 }}
       />
     ),
     gallery: [],
-    name: "AR Texarkana",
+    name: "Texarkana",
     phone: "(903) 831-0269",
     phonelink: "9038310269",
     address: "3601 N State Line Ave, Texarkana, TX 75503",
@@ -241,5 +281,6 @@ export const locations = [
     lat: "33.46111546617134",
     lng: "-94.03023398328624",
     active: false,
+    slug: "texarkana",
   },
 ]

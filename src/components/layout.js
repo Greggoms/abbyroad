@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import { Footer } from "./footer"
-import { MainContainer } from "../elements"
+import { MainContainer, LayoutContainer } from "../elements"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -19,13 +19,13 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="container">
+    <LayoutContainer>
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="content">
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
         <MainContainer>{children}</MainContainer>
       </div>
       <Footer />
-    </div>
+    </LayoutContainer>
   )
 }
 

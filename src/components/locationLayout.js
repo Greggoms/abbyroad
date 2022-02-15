@@ -1,13 +1,26 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react"
 import { ImageGallery } from "./ImageGallery"
 import { Reviews } from "./reviews"
-import { LocationContainer } from "../elements"
+import { LocationContainer, LocationPreviewContainer } from "../elements"
 
 const LocationLayout = props => {
-  return (
+  return props.layout === "all-locations" ? (
+    <LocationPreviewContainer>
+      <Link to={`/locations/${props.slug}`}>
+        <div className="content">
+          <h2>{props.name}</h2>
+          {props.img}
+          <div className="overlay"></div>
+        </div>
+      </Link>
+    </LocationPreviewContainer>
+  ) : (
     <LocationContainer>
       <h1>{props.name}</h1>
+      {props.img}
+      <ImageGallery gallery={props.gallery} />
 
       <div className="info">
         <a href={`tel: ${props.phonelink}`}>{props.phone}</a>
@@ -19,29 +32,17 @@ const LocationLayout = props => {
         </ul>
       </div>
 
-      {props.img}
-      <ImageGallery gallery={props.gallery} />
       {props.lat && (
         <Map
           google={props.google}
           zoom={15}
           initialCenter={{ lat: props.lat, lng: props.lng }}
           className="locationmap"
-          style={{
-            position: "relative !important",
-            width: "100%",
-            height: "100%",
-          }}
         >
           <Marker
             position={{ lat: props.lat, lng: props.lng }}
             title={`${props.name} Store`}
             name={`${props.name} Store`}
-            style={{
-              position: "relative !important",
-              width: "100%",
-              height: "300px",
-            }}
           />
         </Map>
       )}

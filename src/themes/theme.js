@@ -30,6 +30,7 @@ export const theme = {
   breakpoints: {
     mobile: "only screen and (max-width: 37.5rem)", // 600px
     tablet: "only screen and (max-width: 46.75rem)", // 748px
+    desktop: "only screen and (max-width: 75rem)", // 1200px
   },
   animations: {
     button: "box-shadow 0.3s ease",

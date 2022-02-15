@@ -19,8 +19,8 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
-body, html {
-    font-family: ${props => props.theme.fonts.main};
+html, body {
+    font-family: ${theme.fonts.main};
     font-display: fallback; /* <- this can be added to each @font-face definition */
     height: 100%;
   }
