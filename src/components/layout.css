@@ -1,3 +1,30 @@
+/* Keeps footer at bottom. */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+/* ///////////////////////// */
+
+main {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1.0875rem 1.45rem;
+}
+
+.ReactModal__Overlay,
+.ReactModal__Overlay--after-open {
+  z-index: 100 !important;
+}
+
+/* ///////////////////////// */
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

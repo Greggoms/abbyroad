@@ -1,0 +1,70 @@
+import styled from "styled-components"
+
+export const HeroContainer = styled.section`
+  grid-column: 1 / -1;
+  grid-row: 1;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  position: absolute;
+  right: 0;
+  left: 0;
+  // get rid of top & bottom later
+  top: 0;
+  bottom: 0;
+
+  .hero-img {
+    grid-column: 1;
+    grid-row: 1;
+
+    // height has to be changed when
+    // mainContentLayoutElements.js grid-template-rows is changed
+    // uncomment later
+    // height: 70vh;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+
+  .hero-overlay {
+    grid-column: 1;
+    grid-row: 1;
+
+    background: rgba(51, 51, 51, 0.6);
+    z-index: 1;
+  }
+
+  .hero-carousel {
+    grid-column: 1;
+    grid-row: 1/-1;
+  }
+
+  .tagline {
+    grid-column: 1;
+    grid-row: 1/-1;
+    justify-self: center;
+    align-self: center;
+    padding: 0 10px;
+
+    color: ${props => props.theme.grayscale.light1};
+    text-align: center;
+    z-index: 2;
+  }
+
+  h2 {
+    font-size: 80pt;
+    margin-bottom: 1rem;
+
+    @media ${props => props.theme.breakpoints.tablet} {
+      font-size: 60pt;
+    }
+  }
+
+  h3 {
+    font-size: 30pt;
+    @media ${props => props.theme.breakpoints.tablet} {
+      font-size: 20pt;
+    }
+  }
+`
