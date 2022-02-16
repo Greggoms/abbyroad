@@ -22,7 +22,7 @@ module.exports = {
           `${process.env.TEXARKANA_ID}`,
           `${process.env.SHERWOOD_ID}`,
         ],
-        apiKey: `${process.env.PLACES_KEY}`,
+        apiKey: `${process.env.GATSBY_PLACES_KEY}`,
         language: "en-US", // optional, defaults to en-US
       },
     },
