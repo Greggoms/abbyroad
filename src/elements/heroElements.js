@@ -40,18 +40,18 @@ export const HeroContainer = styled.section`
   }
 
   h2 {
-    font-size: 80pt;
+    font-size: 60pt;
     margin-bottom: 1rem;
 
     @media ${props => props.theme.breakpoints.tablet} {
-      font-size: 60pt;
+      font-size: 40pt;
     }
   }
 
   h3 {
-    font-size: 30pt;
+    font-size: 20pt;
     @media ${props => props.theme.breakpoints.tablet} {
-      font-size: 20pt;
+      font-size: 15pt;
     }
   }
 `

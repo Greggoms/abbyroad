@@ -8,11 +8,11 @@ const about = () => (
     <AboutPageContainer>
       <h1>About Us</h1>
       <p>
-        Abby Road came into business many years ago. We specialize in the smoke
-        shop area, carrying everything you need to start your dream setup. If
-        you prefer the old-school style, we have a wide assortment of glass
-        pipes, screens and lighters. If butane torches and sticky messes
-        frighten you, don't worry! We have some cool new-age tech as well!
+        We specialize in the smoke shop area, carrying everything you need to
+        start your dream setup. If you prefer the old-school style, we have a
+        wide assortment of glass pipes, screens and lighters. If butane torches
+        and sticky messes frighten you, don't worry! We have some cool new-age
+        tech as well!
       </p>
       <p>
         Our many locations are run by fellow smoke-enthusiasts who strive to

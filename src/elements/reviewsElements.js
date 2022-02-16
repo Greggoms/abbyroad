@@ -5,11 +5,17 @@ export const ReviewsWrapper = styled.ul`
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-gap: 2rem;
 
-  margin: 0;
+  margin: 20px 0;
 
   @media ${props => props.theme.breakpoints.mobile} {
     grid-template-columns: 1fr;
     grid-gap: 0.5rem;
+  }
+
+  h2 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin: 0;
   }
 `
 export const ReviewContainer = styled.li`
@@ -21,14 +27,14 @@ export const ReviewContainer = styled.li`
     align-items: flex-start;
     width: 100%;
     max-width: 30rem;
+    margin-bottom: 15px;
 
     img {
       margin-right: 10px;
       overflow: hidden;
     }
-
-    p {
-      margin: 0;
-    }
+  }
+  p {
+    margin: 0;
   }
 `

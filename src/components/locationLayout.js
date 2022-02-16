@@ -47,12 +47,11 @@ const LocationLayout = props => {
         </Map>
       )}
       <div className="reviews-section">
-        <h2>Testimonials</h2>
         <Reviews googlePlaceId={props.googlePlaceId} />
       </div>
     </LocationContainer>
   )
 }
 export default GoogleApiWrapper({
-  apiKey: process.env.GATSBY_MAPS_KEY,
+  apiKey: `${process.env.MAPS_KEY}`,
 })(LocationLayout)

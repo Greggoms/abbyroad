@@ -14,13 +14,15 @@ module.exports = {
       resolve: `gatsby-source-google-places`,
       options: {
         placeIds: [
-          process.env.GATSBY_MAUMELLE_ID,
-          process.env.GATSBY_UNIVERSITY_ID,
-          process.env.GATSBY_OTTERCREEK_ID,
-          process.env.GATSBY_TEXARKANA_ID,
-          process.env.GATSBY_SHERWOOD_ID,
+          // `${process.env.CABOT_ID}`,
+          `${process.env.JACKSONVILLE_ID}`,
+          `${process.env.MAUMELLE_ID}`,
+          `${process.env.UNIVERSITY_ID}`,
+          `${process.env.OTTERCREEK_ID}`,
+          `${process.env.TEXARKANA_ID}`,
+          `${process.env.SHERWOOD_ID}`,
         ],
-        apiKey: process.env.GATSBY_PLACES_KEY,
+        apiKey: `${process.env.PLACES_KEY}`,
         language: "en-US", // optional, defaults to en-US
       },
     },
@@ -72,7 +74,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
