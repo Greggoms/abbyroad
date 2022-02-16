@@ -14,7 +14,6 @@ module.exports = {
       resolve: `gatsby-source-google-places`,
       options: {
         placeIds: [
-          // `${process.env.CABOT_ID}`,
           `${process.env.JACKSONVILLE_ID}`,
           `${process.env.MAUMELLE_ID}`,
           `${process.env.UNIVERSITY_ID}`,
