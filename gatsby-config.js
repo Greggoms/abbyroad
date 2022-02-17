@@ -10,6 +10,7 @@ module.exports = {
     siteUrl: `https://abbyroadar.com`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-google-places`,
       options: {
