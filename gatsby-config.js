@@ -1,3 +1,4 @@
+const path = require(`path`)
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -15,14 +16,14 @@ module.exports = {
       resolve: `gatsby-source-google-places`,
       options: {
         placeIds: [
-          `${process.env.JACKSONVILLE_ID}`,
-          `${process.env.MAUMELLE_ID}`,
-          `${process.env.UNIVERSITY_ID}`,
-          `${process.env.OTTERCREEK_ID}`,
-          `${process.env.TEXARKANA_ID}`,
-          `${process.env.SHERWOOD_ID}`,
+          process.env.JACKSONVILLE_ID,
+          process.env.MAUMELLE_ID,
+          process.env.UNIVERSITY_ID,
+          process.env.OTTERCREEK_ID,
+          process.env.TEXARKANA_ID,
+          process.env.SHERWOOD_ID,
         ],
-        apiKey: `${process.env.GATSBY_PLACES_KEY}`,
+        apiKey: process.env.GATSBY_PLACES_KEY,
         language: "en-US", // optional, defaults to en-US
       },
     },
@@ -57,12 +58,20 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: "img",
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `jpg`, `webp`],
+          quality: 100,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
