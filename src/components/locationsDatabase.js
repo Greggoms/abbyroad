@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid"
 export const locations = [
   {
     id: uuidv4(),
-    googlePlaceId: `${process.env.MAUMELLE_ID}`,
+    googlePlaceId: process.env.GATSBY_MAUMELLE_ID,
     img: (
       <StaticImage
         src="../images/Maumelle/maumelle-pano.jpg"
@@ -57,7 +57,7 @@ export const locations = [
   },
   {
     id: uuidv4(),
-    googlePlaceId: `${process.env.UNIVERSITY_ID}`,
+    googlePlaceId: process.env.GATSBY_UNIVERSITY_ID,
     img: (
       <StaticImage
         src="../images/ARUniversity/ar_uni-store-2.jpg"
@@ -104,7 +104,7 @@ export const locations = [
   },
   {
     id: uuidv4(),
-    googlePlaceId: `${process.env.OTTERCREEK_ID}`,
+    googlePlaceId: process.env.GATSBY_OTTERCREEK_ID,
     img: (
       <StaticImage
         src="../images/OtterCreek/otter_creek-pano.jpg"
@@ -198,7 +198,7 @@ export const locations = [
   },
   {
     id: uuidv4(),
-    googlePlaceId: `${process.env.SHERWOOD_ID}`,
+    googlePlaceId: process.env.GATSBY_SHERWOOD_ID,
     img: (
       <StaticImage
         src="../images/image-placeholder.png"
@@ -227,7 +227,7 @@ export const locations = [
   },
   {
     id: uuidv4(),
-    googlePlaceId: `${process.env.JACKSONVILLE_ID}`,
+    googlePlaceId: process.env.GATSBY_JACKSONVILLE_ID,
     img: (
       <StaticImage
         src="../images/image-placeholder.png"
@@ -256,7 +256,7 @@ export const locations = [
   },
   {
     id: uuidv4(),
-    googlePlaceId: `${process.env.TEXARKANA_ID}`,
+    googlePlaceId: process.env.GATSBY_TEXARKANA_ID,
     img: (
       <StaticImage
         src="../images/image-placeholder.png"
