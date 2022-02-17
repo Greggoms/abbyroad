@@ -170,7 +170,6 @@ export const locations = [
   },
   {
     id: uuidv4(),
-    // googlePlaceId: `${process.env.CABOT_ID}`,
     img: (
       <StaticImage
         src="../images/image-placeholder.png"
