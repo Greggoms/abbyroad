@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Map, Marker, GoogleApiWrapper } from "google-maps-react"
 import { ImageGallery } from "./ImageGallery"
 import { Reviews } from "./reviews"
 import { LocationContainer, LocationPreviewContainer } from "../elements"
+import GoogleMap from "./GoogleMap"
 
-const LocationLayout = props => {
+export const LocationLayout = props => {
   return props.layout === "all-locations" ? (
     <LocationPreviewContainer>
       <Link to={`/locations/${props.slug}`}>
@@ -32,26 +32,13 @@ const LocationLayout = props => {
         </ul>
       </div>
 
-      {props.lat && (
-        <Map
-          google={props.google}
-          zoom={15}
-          initialCenter={{ lat: props.lat, lng: props.lng }}
-          className="locationmap"
-        >
-          <Marker
-            position={{ lat: props.lat, lng: props.lng }}
-            title={`${props.name} Store`}
-            name={`${props.name} Store`}
-          />
-        </Map>
-      )}
+      <div className="locationmap">
+        <GoogleMap lat={props.lat} lng={props.lng} />
+      </div>
+
       <div className="reviews-section">
         <Reviews googlePlaceId={props.googlePlaceId} />
       </div>
     </LocationContainer>
   )
 }
-export default GoogleApiWrapper({
-  apiKey: `${process.env.MAPS_KEY}`,
-})(LocationLayout)

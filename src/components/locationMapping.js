@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { locations } from "./locationsDatabase"
-import LocationLayout from "./locationLayout"
+import { LocationLayout } from "./locationLayout"
 import { LocationsPageContainer, LocationPageContainer } from "../elements"
 
 export const LocationMapping = props => {
