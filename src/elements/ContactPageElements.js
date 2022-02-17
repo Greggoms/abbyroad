@@ -33,10 +33,12 @@ export const FormContainer = styled.form`
   }
 
   .submit-btn {
+    cursor: pointer;
     background: inherit;
     border: 2px solid rebeccapurple;
-    width: max-content;
+    width: 150px;
     padding: 5px 10px;
+    color: ${props => props.theme.grayscale.dark4};
   }
 
   .error-message {

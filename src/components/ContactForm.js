@@ -39,10 +39,10 @@ export const ContactForm = () => {
         message,
       }
       await emailjs.send(
-        `${process.env.EMAILJS_SERVICE_ID}`,
-        `${process.env.EMAILJS_TEMPLATE_ID}`,
+        `${process.env.GATSBY_EMAILJS_SERVICE_ID}`,
+        `${process.env.GATSBY_EMAILJS_TEMPLATE_ID}`,
         templateParams,
-        `${process.env.EMAILJS_USER_ID}`
+        `${process.env.GATSBY_EMAILJS_USER_ID}`
       )
       reset()
       toastifySuccess()
