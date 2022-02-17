@@ -2,8 +2,8 @@ import React from "react"
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react"
 
 const GoogleMap = props => {
-  console.log(process.env.MAPS_KEY)
-  console.log(`${process.env.MAPS_KEY}`)
+  console.log(process.env.GATSBY_MAPS_KEY)
+  console.log(`${process.env.GATSBY_MAPS_KEY}`)
   return (
     props.lat && (
       <Map
@@ -21,5 +21,5 @@ const GoogleMap = props => {
   )
 }
 export default GoogleApiWrapper({
-  apiKey: `${process.env.MAPS_KEY}`,
+  apiKey: `${process.env.GATSBY_MAPS_KEY}`,
 })(GoogleMap)
