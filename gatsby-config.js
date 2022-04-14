@@ -105,8 +105,7 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: [`auto`, `jpg`, `webp`],
-          quality: 100,
+          formats: [`auto`],
         },
       },
     },
