@@ -1,26 +1,21 @@
 import React from "react"
-import PropTypes from "prop-types"
+import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { HeaderContainer } from "../elements"
-import { Nav } from "./Nav"
 
-const Header = ({ siteTitle }) => (
+export const Header = () => (
   <HeaderContainer>
     <div className="header-content">
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-      <Nav />
+      <Link to="/" className="logo-link">
+        <StaticImage
+          src="../images/abby-road-logo.png"
+          alt="Abby Road Logo"
+          placeholder="blurred"
+          layout="fixed"
+          width={80}
+        />
+        <h1>Abby Road</h1>
+      </Link>
     </div>
   </HeaderContainer>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header

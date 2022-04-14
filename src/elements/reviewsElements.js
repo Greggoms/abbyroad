@@ -3,13 +3,13 @@ import styled from "styled-components"
 export const ReviewsWrapper = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  grid-gap: 2rem;
+  gap: 2rem;
 
   margin: 20px 0;
 
   @media ${props => props.theme.breakpoints.mobile} {
     grid-template-columns: 1fr;
-    grid-gap: 0.5rem;
+    gap: 0.5rem;
   }
 
   h2 {
@@ -21,7 +21,7 @@ export const ReviewsWrapper = styled.ul`
 export const ReviewContainer = styled.li`
   list-style-type: none;
   padding: 15px;
-  background: ${props => props.theme.grayscale.light1};
+  background: #fff;
   .user-info {
     display: flex;
     align-items: flex-start;

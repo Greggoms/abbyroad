@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const ContactPageContainer = styled.section`
-  grid-column: 3 / span 4;
-  margin-top: 30px;
+  grid-column: 2 / span 6;
+  margin: 30px 0;
 
   @media ${props => props.theme.breakpoints.mobile} {
     grid-column: 2 / span 6;
@@ -11,7 +11,7 @@ export const ContactPageContainer = styled.section`
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
-  grid-gap: 20px;
+  gap: 20px;
 
   .form-section {
     display: flex;
@@ -21,13 +21,14 @@ export const FormContainer = styled.form`
   .input-name,
   .input-email,
   .input-subject {
-    width: 300px;
+    /* min-width: 275px; */
+    max-width: 300px;
     padding-left: 5px;
   }
 
   .input-message {
     min-height: 30px;
-    min-width: 300px;
+    /* min-width: 275px; */
     max-width: 650px;
     padding-left: 5px;
   }

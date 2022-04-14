@@ -1,19 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
 import Seo from "../components/seo"
 import { Hero } from "../components/hero"
-import { IndexPageContainer } from "../elements"
+import { Perks } from "../components/Perks"
+import { ProductCategories } from "../components/ProductCategories"
+import { Promotional } from "../components/Promotional"
 
-const IndexPage = () => (
-  <>
-    <Seo title="Home" />
-    <Hero />
-    <IndexPageContainer>
-      <Link to="/locations">View our locations</Link>
-      <Link to="/about">Read about us</Link>
-      <Link to="/contact">Send us a comment, question, or concern</Link>
-    </IndexPageContainer>
-  </>
-)
+const IndexPage = () => {
+  return (
+    <>
+      <Seo title="Home" />
+      <Hero />
+      <Perks />
+      <ProductCategories />
+      <Promotional />
+    </>
+  )
+}
 
 export default IndexPage

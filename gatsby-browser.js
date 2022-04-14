@@ -13,13 +13,13 @@ export const wrapRootElement = ({ element, props }) => {
 }
 
 const GlobalStyles = createGlobalStyle`
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-html, body {
+  html, body {
     font-family: ${theme.fonts.main};
     font-display: fallback; /* <- this can be added to each @font-face definition */
     height: 100%;

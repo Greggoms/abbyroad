@@ -12,10 +12,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-source-google-places`,
       options: {
         placeIds: [
+          process.env.GATSBY_CABOT_ID,
           process.env.GATSBY_JACKSONVILLE_ID,
           process.env.GATSBY_MAUMELLE_ID,
           process.env.GATSBY_UNIVERSITY_ID,
@@ -55,11 +57,47 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-images`, `gatsby-remark-images-zoom`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              linkImagesToOriginal: false,
+              maxWidth: 1920,
+              wrapperStyle: `max-height: ${process.env.GATSBY_BLOG_IMAGE_HEIGHT}; overflow: hidden`,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "img",
+        name: "products",
+        path: `${__dirname}/src/images/products`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "images",
         path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
       },
     },
     `gatsby-transformer-sharp`,

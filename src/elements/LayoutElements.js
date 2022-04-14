@@ -5,7 +5,11 @@ export const MainContainer = styled.main`
 
   #gatsby-focus-wrapper {
     display: grid;
-    grid-template-columns: 10px repeat(6, 1fr) 10px;
+    grid-template-columns: 10vw repeat(6, 1fr) 10vw;
+
+    @media ${props => props.theme.breakpoints.mobile} {
+      grid-template-columns: 10px repeat(6, 1fr) 10px;
+    }
   }
 `
 
@@ -15,8 +19,12 @@ export const LayoutContainer = styled.div`
   ///////////////////////////*/
 
   display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  height: 100vh;
+  grid-template-rows: min-content min-content 1fr min-content;
+  min-height: 100vh;
 
   /*/////////////////////////*/
+
+  .content {
+    background: ${props => props.theme.grayscale.light1};
+  }
 `

@@ -6,7 +6,15 @@ export const theme = {
   colors: {
     purple: "#B149BF",
     green: "#09A603",
-    link: "#00c5d6",
+    linkDark: "#387ABD",
+    linkLight: "#B9E1FF",
+    tiedye: {
+      darkBlue: "#2D1859",
+      lightBlue: "#049DBF",
+      green: "#65A603",
+      yellow: "#F2B705",
+      orange: "#F25C05",
+    },
   },
   grayscale: {
     light1: "#F2F2F2",

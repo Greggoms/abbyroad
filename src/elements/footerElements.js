@@ -1,12 +1,16 @@
 import styled from "styled-components"
 
 export const FooterContainer = styled.footer`
+  display: grid;
+  grid-template-columns: 10vw repeat(6, 1fr) 10vw;
+
   background: rebeccapurple;
 
   .footer-content {
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 1.45rem 1.0875rem;
+    grid-column: 2 / span 6;
+    grid-column-gap: 20px;
+
+    padding: 1.45rem 0;
     color: ${props => props.theme.grayscale.light1};
   }
   a {

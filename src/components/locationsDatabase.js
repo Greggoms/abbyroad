@@ -170,6 +170,7 @@ export const locations = [
   },
   {
     id: uuidv4(),
+    googlePlaceId: process.env.GATSBY_CABOT_ID,
     img: (
       <StaticImage
         src="../images/image-placeholder.png"
@@ -183,8 +184,8 @@ export const locations = [
     ),
     gallery: [],
     name: "Cabot",
-    phone: "",
-    phonelink: "",
+    phone: "(501) 422-6150",
+    phonelink: "5014226150",
     address: "2006 South Pine St Suite F, Cabot, AR 72023",
     hours: [
       "Sun: 12pm - 7pm",
@@ -241,8 +242,8 @@ export const locations = [
     ),
     gallery: [],
     name: "Jacksonville",
-    phone: "",
-    phonelink: "",
+    phone: "(501) 457-7657",
+    phonelink: "5014577657",
     address: "640 W Main St #640, Jacksonville, AR 72076",
     hours: [
       "Sun: 11pm - 7pm",
