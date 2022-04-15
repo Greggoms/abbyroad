@@ -4,7 +4,6 @@ import { Transition, config, animated } from "@react-spring/web"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHouse } from "@fortawesome/free-solid-svg-icons"
 import { Navbar, NavLinks } from "../elements"
-import { Clock } from "./Clock"
 
 export const Nav = () => {
   const [offset, setOffset] = useState(0)
@@ -58,8 +57,6 @@ export const Nav = () => {
             Contact
           </Link>
         </NavLinks>
-
-        <Clock />
       </div>
     </Navbar>
   )

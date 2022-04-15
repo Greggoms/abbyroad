@@ -5,7 +5,7 @@ export const LocationsPageContainer = styled.section`
   grid-column: 2 / span 6;
 
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 60vh auto;
   gap: 20px;
 
@@ -14,59 +14,43 @@ export const LocationsPageContainer = styled.section`
   }
 
   .locations-google-map {
-    grid-column: 2;
+    grid-column: 1 / -1;
     grid-row: 1;
 
     position: relative;
     margin-top: 30px;
   }
 
-  a {
-    text-decoration: none;
-  }
-
-  .quick-scroll {
-    grid-row: 1 /-1;
-    position: sticky;
-    top: 60px;
-    height: max-content;
-
-    border: 1px solid #333;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 30px 0 0 0;
-
-    @media ${props => props.theme.breakpoints.tablet} {
-      display: none;
-    }
-
-    h3 {
-      margin: 0;
-      margin-bottom: 5px;
-      border-bottom: 1px solid #ccc;
-    }
-
-    ul {
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-
-    button {
-      border: none;
-      background: inherit;
-      cursor: pointer;
-    }
-  }
-
   .locations-list {
+    grid-column: 1 / -1;
+    grid-row: 3;
+
     display: flex;
     flex-direction: column;
+    gap: 60px;
 
     @media ${props => props.theme.breakpoints.tablet} {
       grid-column: 1 / -1;
+      gap: 20px;
     }
+  }
+
+  .open {
+    color: ${props => props.theme.grayscale.light1};
+    background: ${props => props.theme.colors.green};
+    padding: 4px;
+  }
+
+  .closed {
+    align-self: flex-start;
+
+    color: ${props => props.theme.grayscale.light1};
+    background: ${props => props.theme.colors.red};
+    padding: 4px;
+  }
+
+  a {
+    text-decoration: none;
   }
 `
 export const LocationPageContainer = styled.section`
@@ -77,9 +61,9 @@ export const LocationPageContainer = styled.section`
 export const LocationPreviewContainer = styled.div`
   .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content auto;
-    grid-column-gap: 10px;
+    grid-template-columns: 325px 1fr;
+    grid-template-rows: 125px;
+    gap: 10px;
 
     @media ${props => props.theme.breakpoints.tablet} {
       grid-template-columns: 1fr;
@@ -93,7 +77,6 @@ export const LocationPreviewContainer = styled.div`
   .name-pic {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
 
     .gatsby-image-wrapper,
     .overlay {
@@ -101,15 +84,8 @@ export const LocationPreviewContainer = styled.div`
       grid-row: 1;
     }
 
-    .gatsby-image-wrapper {
-      height: 200px;
-    }
-
     .overlay {
       z-index: 2;
-
-      width: 100%;
-      height: 100%;
       background: rgba(52, 52, 52, 0.7);
     }
   }
@@ -118,13 +94,18 @@ export const LocationPreviewContainer = styled.div`
     grid-column: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+
     @media ${props => props.theme.breakpoints.tablet} {
       display: none;
     }
 
-    ul {
-      list-style-type: none;
+    p {
+      margin: 0;
+    }
+
+    a:last-child {
+      justify-self: flex-end;
     }
 
     a,
@@ -139,15 +120,6 @@ export const LocationPreviewContainer = styled.div`
 
     a:active {
       color: ${props => props.theme.colors.green};
-    }
-  }
-
-  .blankspace {
-    grid-row: 1;
-    padding-bottom: 60px;
-
-    @media ${props => props.theme.breakpoints.tablet} {
-      padding-bottom: 20px;
     }
   }
 

@@ -11,43 +11,33 @@ export const Navbar = styled.section`
 
   .nav-content {
     display: grid;
-    grid-template-columns: 10vw repeat(3, 1fr) 10vw;
+    grid-template-columns: 10vw min-content 1fr 10vw;
 
-    @media ${props => props.theme.breakpoints.mobile} {
+    @media ${props => props.theme.breakpoints.tablet} {
       grid-template-columns: 10vw 1fr 10vw;
     }
   }
 
   .svg-link {
     grid-column: 2;
+    grid-row: 1;
     justify-self: center;
 
-    @media ${props => props.theme.breakpoints.mobile} {
-      grid-column: 1 / 2;
-      grid-row: 1 / 3;
-      justify-self: flex-end;
-      align-self: center;
+    @media ${props => props.theme.breakpoints.tablet} {
+      justify-self: flex-start;
     }
 
     a {
       color: ${props => props.theme.grayscale.light1};
     }
   }
-
-  p {
-    margin: 0;
-  }
 `
 
 export const NavLinks = styled.nav`
   display: flex;
   justify-self: center;
-  grid-column: 3;
-
-  @media ${props => props.theme.breakpoints.mobile} {
-    grid-column: 2;
-    grid-row: 1;
-  }
+  grid-column: 1 / -1;
+  grid-row: 1;
 
   a {
     color: ${props => props.theme.grayscale.light1};
@@ -58,7 +48,7 @@ export const NavLinks = styled.nav`
     margin-left: 20px;
 
     @media ${props => props.theme.breakpoints.mobile} {
-      margin-left: 8px;
+      margin-left: 12px;
     }
   }
 `

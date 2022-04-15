@@ -50,6 +50,36 @@ export const locations = [
     phonelink: "5014008358",
     address: "9807 Maumelle Blvd, Maumelle, AR 72113",
     hours: ["Sun: 11pm - 7pm", "Mon - Sat: 10am - 8pm"],
+    hoursLong: {
+      sunday: {
+        open: 11,
+        close: 19,
+      },
+      monday: {
+        open: 10,
+        close: 20,
+      },
+      tuesday: {
+        open: 10,
+        close: 20,
+      },
+      wednesday: {
+        open: 10,
+        close: 20,
+      },
+      thursday: {
+        open: 10,
+        close: 20,
+      },
+      friday: {
+        open: 10,
+        close: 20,
+      },
+      saturday: {
+        open: 10,
+        close: 20,
+      },
+    },
     lat: "34.82258309493743",
     lng: "-92.37022047994269",
     active: false,
@@ -97,6 +127,36 @@ export const locations = [
     phonelink: "5016146400",
     address: "1400 S University Ave J, Little Rock, AR 72204",
     hours: ["Sun: 11pm - 7pm", "Mon - Sat: 10am - 8pm"],
+    hoursLong: {
+      sunday: {
+        open: 11,
+        close: 19,
+      },
+      monday: {
+        open: 10,
+        close: 20,
+      },
+      tuesday: {
+        open: 10,
+        close: 20,
+      },
+      wednesday: {
+        open: 10,
+        close: 20,
+      },
+      thursday: {
+        open: 10,
+        close: 20,
+      },
+      friday: {
+        open: 10,
+        close: 20,
+      },
+      saturday: {
+        open: 10,
+        close: 20,
+      },
+    },
     lat: "34.73889731200156",
     lng: "-92.34197102973047",
     active: false,
@@ -163,6 +223,36 @@ export const locations = [
       "Mon - Thurs: 9am - 8pm",
       "Fri & Sat: 9am - 9pm",
     ],
+    hoursLong: {
+      sunday: {
+        open: 11,
+        close: 19,
+      },
+      monday: {
+        open: 9,
+        close: 20,
+      },
+      tuesday: {
+        open: 9,
+        close: 20,
+      },
+      wednesday: {
+        open: 9,
+        close: 20,
+      },
+      thursday: {
+        open: 9,
+        close: 20,
+      },
+      friday: {
+        open: 9,
+        close: 21,
+      },
+      saturday: {
+        open: 9,
+        close: 21,
+      },
+    },
     lat: "34.65672750263045",
     lng: "-92.42679890133392",
     active: false,
@@ -175,11 +265,7 @@ export const locations = [
       <StaticImage
         src="../images/image-placeholder.png"
         alt="Cabot Store"
-        layout="fixed"
-        width={200}
-        height={200}
-        style={{ justifySelf: "center" }}
-        transformOptions={{ trim: 10 }}
+        layout="fullWidth"
       />
     ),
     gallery: [],
@@ -192,6 +278,36 @@ export const locations = [
       "Mon - Thurs: 9am - 8pm",
       "Fri & Sat: 9am - 9pm",
     ],
+    hoursLong: {
+      sunday: {
+        open: 12,
+        close: 19,
+      },
+      monday: {
+        open: 9,
+        close: 20,
+      },
+      tuesday: {
+        open: 9,
+        close: 20,
+      },
+      wednesday: {
+        open: 9,
+        close: 20,
+      },
+      thursday: {
+        open: 9,
+        close: 20,
+      },
+      friday: {
+        open: 9,
+        close: 21,
+      },
+      saturday: {
+        open: 9,
+        close: 21,
+      },
+    },
     lat: "34.943645606008616",
     lng: "-92.00911183761357",
     active: false,
@@ -204,11 +320,7 @@ export const locations = [
       <StaticImage
         src="../images/image-placeholder.png"
         alt="Sherwood Store"
-        layout="fixed"
-        width={200}
-        height={200}
-        style={{ justifySelf: "center" }}
-        transformOptions={{ trim: 10 }}
+        layout="fullWidth"
       />
     ),
     gallery: [],
@@ -221,6 +333,36 @@ export const locations = [
       "Mon - Thurs: 9am - 8pm",
       "Fri & Sat: 9am - 9pm",
     ],
+    hoursLong: {
+      sunday: {
+        open: 12,
+        close: 19,
+      },
+      monday: {
+        open: 9,
+        close: 20,
+      },
+      tuesday: {
+        open: 9,
+        close: 20,
+      },
+      wednesday: {
+        open: 9,
+        close: 20,
+      },
+      thursday: {
+        open: 9,
+        close: 20,
+      },
+      friday: {
+        open: 9,
+        close: 21,
+      },
+      saturday: {
+        open: 9,
+        close: 21,
+      },
+    },
     lat: "34.83185459399566",
     lng: "-92.18920150531893",
     active: false,
@@ -233,11 +375,7 @@ export const locations = [
       <StaticImage
         src="../images/image-placeholder.png"
         alt="Jacksonville Store"
-        layout="fixed"
-        width={200}
-        height={200}
-        style={{ justifySelf: "center" }}
-        transformOptions={{ trim: 10 }}
+        layout="fullWidth"
       />
     ),
     gallery: [],
@@ -250,6 +388,36 @@ export const locations = [
       "Mon - Thurs: 9am - 8pm",
       "Fri & Sat: 9am - 9pm",
     ],
+    hoursLong: {
+      sunday: {
+        open: 11,
+        close: 19,
+      },
+      monday: {
+        open: 9,
+        close: 20,
+      },
+      tuesday: {
+        open: 9,
+        close: 20,
+      },
+      wednesday: {
+        open: 9,
+        close: 20,
+      },
+      thursday: {
+        open: 9,
+        close: 20,
+      },
+      friday: {
+        open: 9,
+        close: 21,
+      },
+      saturday: {
+        open: 9,
+        close: 21,
+      },
+    },
     lat: "34.86841286319381",
     lng: "-92.11741122422272",
     active: false,
@@ -262,11 +430,7 @@ export const locations = [
       <StaticImage
         src="../images/image-placeholder.png"
         alt="Texarkana Store"
-        layout="fixed"
-        width={200}
-        height={200}
-        style={{ justifySelf: "center" }}
-        transformOptions={{ trim: 10 }}
+        layout="fullWidth"
       />
     ),
     gallery: [],
@@ -279,6 +443,36 @@ export const locations = [
       "Mon - Thurs: 9am - 8pm",
       "Fri & Sat: 9am - 9pm",
     ],
+    hoursLong: {
+      sunday: {
+        open: 12,
+        close: 19,
+      },
+      monday: {
+        open: 9,
+        close: 20,
+      },
+      tuesday: {
+        open: 9,
+        close: 20,
+      },
+      wednesday: {
+        open: 9,
+        close: 20,
+      },
+      thursday: {
+        open: 9,
+        close: 20,
+      },
+      friday: {
+        open: 9,
+        close: 21,
+      },
+      saturday: {
+        open: 9,
+        close: 21,
+      },
+    },
     lat: "33.46111546617134",
     lng: "-94.03023398328624",
     active: false,

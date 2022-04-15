@@ -8,6 +8,7 @@ export const theme = {
     green: "#09A603",
     linkDark: "#387ABD",
     linkLight: "#B9E1FF",
+    red: "#E9635D",
     tiedye: {
       darkBlue: "#2D1859",
       lightBlue: "#049DBF",

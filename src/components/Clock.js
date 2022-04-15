@@ -15,26 +15,34 @@ export const Clock = () => {
   }
 
   const handleFormatDate = () => {
-    return format(new Date(), `EEEE MMMM dd, yyyy`)
+    return format(new Date(), `EEEE MMMM do,`)
   }
 
   return (
     <ClockContainer>
-      {handleFormatDate()} {time.toLocaleTimeString()}
+      <p>{handleFormatDate()}</p> <p>{time.toLocaleTimeString()}</p>
     </ClockContainer>
   )
 }
 
 const ClockContainer = styled.div`
+  grid-column: 1/-1;
+  grid-row: 2;
+
   color: ${props => props.theme.grayscale.light1};
   background: ${props => props.theme.grayscale.dark4};
-  padding: 0 10px;
-  grid-column: 4;
-  justify-self: flex-end;
+  padding: 10px 0;
+  margin: 15px 0;
 
-  @media ${props => props.theme.breakpoints.mobile} {
-    grid-column: 1/-1;
-    grid-row: 2;
-    justify-self: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    flex-direction: row;
+  }
+
+  p {
+    margin: 0;
   }
 `
