@@ -6,10 +6,19 @@ export const LocationsPageContainer = styled.section`
 
   display: grid;
   grid-template-columns: 160px 1fr;
+  grid-template-rows: 60vh auto;
   gap: 20px;
 
   @media ${props => props.theme.breakpoints.tablet} {
     gap: 0;
+  }
+
+  .locations-google-map {
+    grid-column: 2;
+    grid-row: 1;
+
+    position: relative;
+    margin-top: 30px;
   }
 
   a {
@@ -17,6 +26,7 @@ export const LocationsPageContainer = styled.section`
   }
 
   .quick-scroll {
+    grid-row: 1 /-1;
     position: sticky;
     top: 60px;
     height: max-content;
@@ -24,7 +34,7 @@ export const LocationsPageContainer = styled.section`
     border: 1px solid #333;
     border-radius: 5px;
     padding: 5px;
-    margin: 60px 0 0 0;
+    margin: 30px 0 0 0;
 
     @media ${props => props.theme.breakpoints.tablet} {
       display: none;

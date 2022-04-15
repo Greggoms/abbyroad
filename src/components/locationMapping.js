@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import { locations } from "./locationsDatabase"
+import GoogleMapLocations from "./GoogleMapLocations"
 import { LocationLayout } from "./locationLayout"
 import { LocationsPageContainer, LocationPageContainer } from "../elements"
 // import { Li } from "../utils/Li"
@@ -15,6 +16,9 @@ export const LocationMapping = props => {
 
   return props.layout === "all-locations" ? (
     <LocationsPageContainer>
+      <div className="locations-google-map">
+        <GoogleMapLocations />
+      </div>
       <div className="quick-scroll">
         <h3>Quick Scroll</h3>
         <nav>

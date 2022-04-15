@@ -3,7 +3,8 @@ import { Link } from "gatsby"
 import { Transition, config, animated } from "@react-spring/web"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHouse } from "@fortawesome/free-solid-svg-icons"
-import { NavContainer } from "../elements"
+import { Navbar, NavLinks } from "../elements"
+import { Clock } from "./Clock"
 
 export const Nav = () => {
   const [offset, setOffset] = useState(0)
@@ -22,7 +23,7 @@ export const Nav = () => {
   }, [offset])
 
   return (
-    <NavContainer>
+    <Navbar>
       <div className="nav-content">
         <Transition
           items={show}
@@ -43,7 +44,7 @@ export const Nav = () => {
             )
           }
         </Transition>
-        <div>
+        <NavLinks>
           <Link to="/locations" activeStyle={{ textDecoration: "underline" }}>
             Locations
           </Link>
@@ -56,8 +57,10 @@ export const Nav = () => {
           <Link to="/contact" activeStyle={{ textDecoration: "underline" }}>
             Contact
           </Link>
-        </div>
+        </NavLinks>
+
+        <Clock />
       </div>
-    </NavContainer>
+    </Navbar>
   )
 }
