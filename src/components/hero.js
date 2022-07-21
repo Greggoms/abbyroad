@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Carousel } from "react-responsive-carousel"
-import { HeroContainer } from "../elements"
+import { HeroContainer } from "../css"
 
 export const Hero = () => {
   return (

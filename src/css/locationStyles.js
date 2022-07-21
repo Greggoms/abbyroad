@@ -29,6 +29,8 @@ export const LocationsPageContainer = styled.section`
     flex-direction: column;
     gap: 60px;
 
+    margin: 0 auto;
+
     @media ${props => props.theme.breakpoints.tablet} {
       grid-column: 1 / -1;
       gap: 20px;

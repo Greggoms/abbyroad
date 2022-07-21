@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { Transition, config, animated } from "@react-spring/web"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHouse } from "@fortawesome/free-solid-svg-icons"
-import { Navbar, NavLinks } from "../elements"
+import { Navbar, NavLinks } from "../css"
 
 export const Nav = () => {
   const [offset, setOffset] = useState(0)

@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { useSpring, easings } from "@react-spring/web"
 import Seo from "../components/seo"
-import { BlogPageContainer } from "../elements"
+import { BlogPageContainer } from "../css"
 
 export const query = graphql`
   query ($slug: String!) {

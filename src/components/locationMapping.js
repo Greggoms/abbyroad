@@ -3,7 +3,7 @@ import { locations } from "./locationsDatabase"
 import GoogleMapLocations from "./GoogleMapLocations"
 import { LocationLayout } from "./locationLayout"
 import { Clock } from "./Clock"
-import { LocationsPageContainer, LocationPageContainer } from "../elements"
+import { LocationsPageContainer, LocationPageContainer } from "../css"
 
 export const LocationMapping = props => {
   const [locationDetails, setLocationDetails] = useState([])

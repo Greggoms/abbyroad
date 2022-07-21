@@ -21,6 +21,11 @@ const GoogleMapLocations = props => {
     }
   }
 
+  const markerStyles = {
+    border: "2px solid red",
+    marginBottom: "100px",
+  }
+
   return (
     <Map
       google={props.google}
@@ -35,6 +40,7 @@ const GoogleMapLocations = props => {
           title={`${name} Store`}
           name={`${name} Store`}
           onClick={onMarkerClick}
+          style={markerStyles}
         />
       ))}
       <InfoWindow marker={activeMarker} visible={showInfoWindow}>

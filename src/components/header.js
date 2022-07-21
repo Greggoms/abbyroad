@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import { HeaderContainer } from "../elements"
+import { HeaderContainer } from "../css"
 
 export const Header = () => {
   return (

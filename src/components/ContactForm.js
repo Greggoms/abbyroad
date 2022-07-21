@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import { useForm } from "react-hook-form"
+import Recaptcha from "react-recaptcha"
 import emailjs, { init } from "@emailjs/browser"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.min.css"
-import { FormContainer } from "../elements"
+import { FormContainer } from "../css"
 
 export const ContactForm = () => {
+  const [notARobot, setNotARobot] = useState(false)
   const {
     register,
     handleSubmit,
@@ -29,26 +31,57 @@ export const ContactForm = () => {
 
   const onSubmit = async data => {
     const { name, email, subject, message } = data
+    init(process.env.EMAILJS_USER_ID)
 
     try {
-      init(`${process.env.EMAILJS_USER_ID}`)
-      const templateParams = {
-        name,
-        email,
-        subject,
-        message,
+      // Dont let the form submit if the recaptcha
+      // hasn't been completed
+      if (!notARobot) {
+        toast.error(e => (
+          <div>
+            <h2>You must pass the reCAPTCHA</h2>
+            <p>{e.message}</p>
+          </div>
+        ))
+      } else {
+        const templateParams = {
+          name,
+          email,
+          subject,
+          message,
+        }
+        await emailjs.send(
+          process.env.GATSBY_EMAILJS_SERVICE_ID,
+          process.env.GATSBY_EMAILJS_TEMPLATE_ID,
+          templateParams,
+          process.env.GATSBY_EMAILJS_USER_ID
+        )
+        reset()
+        toastifySuccess()
       }
-      await emailjs.send(
-        `${process.env.GATSBY_EMAILJS_SERVICE_ID}`,
-        `${process.env.GATSBY_EMAILJS_TEMPLATE_ID}`,
-        templateParams,
-        `${process.env.GATSBY_EMAILJS_USER_ID}`
-      )
-      reset()
-      toastifySuccess()
     } catch (e) {
       console.log(e)
     }
+  }
+
+  // Contact Form reCAPTCHA statuses
+  // https://github.com/appleboy/react-recaptcha
+
+  // specifying your onload callback function
+  // Runs when the page has connected
+  // to the recaptcha services
+  const callback = function () {
+    console.log("recaptcha is ready")
+  }
+  // specifying verify callback function
+  // Runs when the recaptcha has been completed
+  const verifyCallback = function (response) {
+    setNotARobot(true)
+  }
+  // specifying expired callback function
+  // Runs after a set time. Forces another completion
+  const expiredCallback = function (response) {
+    setNotARobot(false)
   }
 
   return (
@@ -132,6 +165,16 @@ export const ContactForm = () => {
             <span className="error-message">Please enter a message</span>
           )}
         </div>
+
+        <Recaptcha
+          sitekey={process.env.GATSBY_RECAPTCHA_SITE_KEY}
+          render="explicit"
+          theme="dark"
+          onloadCallback={callback}
+          verifyCallback={verifyCallback}
+          expiredCallback={expiredCallback}
+        />
+
         <button className="submit-btn" type="submit">
           Submit
         </button>

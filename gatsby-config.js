@@ -18,6 +18,7 @@ module.exports = {
       options: {
         placeIds: [
           process.env.GATSBY_CABOT_ID,
+          process.env.GATSBY_CONWAY_ID,
           process.env.GATSBY_JACKSONVILLE_ID,
           process.env.GATSBY_MAUMELLE_ID,
           process.env.GATSBY_UNIVERSITY_ID,
@@ -58,6 +59,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-remark-images`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

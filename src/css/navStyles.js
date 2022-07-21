@@ -7,7 +7,7 @@ export const Navbar = styled.section`
   background: rebeccapurple;
   padding: 10px 0;
 
-  z-index: 100;
+  z-index: 5;
 
   .nav-content {
     display: grid;

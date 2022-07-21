@@ -3,7 +3,6 @@ import Seo from "../components/seo"
 import { Hero } from "../components/hero"
 import { Perks } from "../components/Perks"
 import { ProductCategories } from "../components/ProductCategories"
-import { Promotional } from "../components/Promotional"
 
 const IndexPage = () => {
   return (
@@ -12,7 +11,6 @@ const IndexPage = () => {
       <Hero />
       <Perks />
       <ProductCategories />
-      <Promotional />
     </>
   )
 }

@@ -10,7 +10,7 @@ export const FooterContainer = styled.footer`
     grid-column: 2 / span 6;
     grid-column-gap: 20px;
 
-    padding: 1.45rem 0;
+    padding: 10px 0;
     color: ${props => props.theme.grayscale.light1};
   }
   a {

@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { useSpring, easings } from "@react-spring/web"
 import { ImageGallery } from "./ImageGallery"
 import { Reviews } from "./reviews"
-import { LocationContainer, LocationPreviewContainer } from "../elements"
+import { LocationContainer, LocationPreviewContainer } from "../css"
 import GoogleMap from "./GoogleMap"
 
 export const LocationLayout = props => {
@@ -12,85 +12,23 @@ export const LocationLayout = props => {
 
   const handleIsOpen = () => {
     if (
-      currentDayOfWeek === 0 &&
-      currentHour >= props.hoursLong.sunday.open &&
-      currentHour < props.hoursLong.sunday.close
+      currentHour >= props.hoursLong[currentDayOfWeek].open &&
+      currentHour < props.hoursLong[currentDayOfWeek].close
     ) {
       return (
         <p>
           <span className="open">Open</span> today until{" "}
-          {props.hoursLong.sunday.close - 12}:00pm
+          {props.hoursLong[currentDayOfWeek].close - 12}:00pm
         </p>
       )
-    } else if (
-      currentDayOfWeek === 1 &&
-      currentHour >= props.hoursLong.monday.open &&
-      currentHour < props.hoursLong.monday.close
-    ) {
+    } else {
       return (
         <p>
-          <span className="open">Open</span> today until{" "}
-          {props.hoursLong.monday.close - 12}:00pm
-        </p>
-      )
-    } else if (
-      currentDayOfWeek === 2 &&
-      currentHour >= props.hoursLong.tuesday.open &&
-      currentHour < props.hoursLong.tuesday.close
-    ) {
-      return (
-        <p>
-          <span className="open">Open</span> today until{" "}
-          {props.hoursLong.tuesday.close - 12}:00pm
-        </p>
-      )
-    } else if (
-      currentDayOfWeek === 3 &&
-      currentHour >= props.hoursLong.wednesday.open &&
-      currentHour < props.hoursLong.wednesday.close
-    ) {
-      return (
-        <p>
-          <span className="open">Open</span> today until{" "}
-          {props.hoursLong.wednesday.close - 12}:00pm
-        </p>
-      )
-    } else if (
-      currentDayOfWeek === 4 &&
-      currentHour >= props.hoursLong.thursday.open &&
-      currentHour < props.hoursLong.thursday.close
-    ) {
-      return (
-        <p>
-          <span className="open">Open</span> today until{" "}
-          {props.hoursLong.thursday.close - 12}:00pm
-        </p>
-      )
-    } else if (
-      currentDayOfWeek === 5 &&
-      currentHour >= props.hoursLong.friday.open &&
-      currentHour < props.hoursLong.friday.close
-    ) {
-      return (
-        <p>
-          <span className="open">Open</span> today until{" "}
-          {props.hoursLong.friday.close - 12}:00pm
-        </p>
-      )
-    } else if (
-      currentDayOfWeek === 6 &&
-      currentHour >= props.hoursLong.saturday.open &&
-      currentHour < props.hoursLong.saturday.close
-    ) {
-      return (
-        <p>
-          <span className="open">Open</span> today until{" "}
-          {props.hoursLong.saturday.close - 12}
-          :00pm
+          <span className="closed">Closed</span> Opens at{" "}
+          {props.hoursLong[currentDayOfWeek + 1].open}:00am
         </p>
       )
     }
-    return <p className="closed">Closed</p>
   }
 
   const animationProps = useSpring({

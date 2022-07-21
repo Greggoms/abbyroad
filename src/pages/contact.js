@@ -1,7 +1,7 @@
 import * as React from "react"
 import Seo from "../components/seo"
 import { ContactForm } from "../components/ContactForm"
-import { ContactPageContainer } from "../elements/ContactPageElements"
+import { ContactPageContainer } from "../css"
 
 const contact = () => (
   <>

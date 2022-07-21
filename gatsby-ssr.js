@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { theme } from "./src/themes/theme"
 import Layout from "./src/components/layout"
 const { createGlobalStyle, ThemeProvider } = require("styled-components")
@@ -6,6 +7,14 @@ const { createGlobalStyle, ThemeProvider } = require("styled-components")
 export const wrapRootElement = ({ element, props }) => {
   return (
     <ThemeProvider theme={theme}>
+      <Helmet>
+        <script
+          src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+          nonce="{NONCE}"
+          async
+          defer
+        ></script>
+      </Helmet>
       <GlobalStyles />
       <Layout {...props}>{element}</Layout>
     </ThemeProvider>

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useSpring, animated } from "@react-spring/web"
-import { PerksContainer } from "../elements"
+import { PerksContainer } from "../css"
 
 export const Perks = () => {
   const { number } = useSpring({

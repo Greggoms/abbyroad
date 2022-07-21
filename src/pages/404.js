@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Seo from "../components/seo"
-import { NotFoundContainer } from "../elements"
+import { NotFoundContainer } from "../css"
 
 export const query = graphql`
   query {

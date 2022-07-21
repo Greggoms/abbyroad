@@ -2,8 +2,9 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Zoom from "react-medium-image-zoom"
-import { InventoryContainer } from "../elements"
+import { InventoryContainer } from "../css"
 import { Link } from "gatsby"
+import "react-medium-image-zoom/dist/styles.css"
 
 export const ProductCategories = () => {
   const data = useStaticQuery(graphql`

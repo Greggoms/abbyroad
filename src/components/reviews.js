@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { ReviewContainer, ReviewsWrapper } from "../elements"
+import { ReviewContainer, ReviewsWrapper } from "../css"
 
 export const Reviews = props => {
   return (

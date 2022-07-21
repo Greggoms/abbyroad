@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { PotencyCalculatorContainer } from "../elements"
+import { PotencyCalculatorContainer } from "../css"
 
 export const PotencyCalculator = () => {
   const [mg, setMg] = useState("")

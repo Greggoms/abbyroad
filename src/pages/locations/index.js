@@ -1,6 +1,6 @@
 import * as React from "react"
-import Seo from "../components/seo"
-import { LocationMapping } from "../components/locationMapping"
+import Seo from "../../components/seo"
+import { LocationMapping } from "../../components/locationMapping"
 
 const locations = () => (
   <>

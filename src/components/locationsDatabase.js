@@ -5,6 +5,62 @@ import { v4 as uuidv4 } from "uuid"
 export const locations = [
   {
     id: uuidv4(),
+    googlePlaceId: process.env.GATSBY_CONWAY_ID,
+    img: (
+      <StaticImage
+        src="../images/image-placeholder.png"
+        alt="Conway Store"
+        layout="fullWidth"
+      />
+    ),
+    gallery: [],
+    name: "Conway",
+    phone: "(501) 358-6119",
+    phonelink: "5013586119",
+    address: "201 Skyline Dr Suite 3, Conway, AR 72032",
+    hours: [
+      "Sun: 12pm - 7pm",
+      "Mon - Thurs: 9am - 8pm",
+      "Fri & Sat: 9am - 9pm",
+    ],
+    hoursLong: [
+      // Sun -> Sat
+      {
+        open: 11,
+        close: 19,
+      },
+      {
+        open: 9,
+        close: 20,
+      },
+      {
+        open: 9,
+        close: 20,
+      },
+      {
+        open: 9,
+        close: 20,
+      },
+      {
+        open: 9,
+        close: 20,
+      },
+      {
+        open: 9,
+        close: 21,
+      },
+      {
+        open: 9,
+        close: 21,
+      },
+    ],
+    lat: "35.110389322741995",
+    lng: "-92.42835939089824",
+    active: false,
+    slug: "conway",
+  },
+  {
+    id: uuidv4(),
     googlePlaceId: process.env.GATSBY_MAUMELLE_ID,
     img: (
       <StaticImage
@@ -50,36 +106,37 @@ export const locations = [
     phonelink: "5014008358",
     address: "9807 Maumelle Blvd, Maumelle, AR 72113",
     hours: ["Sun: 11pm - 7pm", "Mon - Sat: 10am - 8pm"],
-    hoursLong: {
-      sunday: {
+    hoursLong: [
+      // Sun -> Sat
+      {
         open: 11,
         close: 19,
       },
-      monday: {
+      {
         open: 10,
         close: 20,
       },
-      tuesday: {
+      {
         open: 10,
         close: 20,
       },
-      wednesday: {
+      {
         open: 10,
         close: 20,
       },
-      thursday: {
+      {
         open: 10,
         close: 20,
       },
-      friday: {
+      {
         open: 10,
         close: 20,
       },
-      saturday: {
+      {
         open: 10,
         close: 20,
       },
-    },
+    ],
     lat: "34.82258309493743",
     lng: "-92.37022047994269",
     active: false,
@@ -127,36 +184,37 @@ export const locations = [
     phonelink: "5016146400",
     address: "1400 S University Ave J, Little Rock, AR 72204",
     hours: ["Sun: 11pm - 7pm", "Mon - Sat: 10am - 8pm"],
-    hoursLong: {
-      sunday: {
+    hoursLong: [
+      // Sun -> Sat
+      {
         open: 11,
         close: 19,
       },
-      monday: {
+      {
         open: 10,
         close: 20,
       },
-      tuesday: {
+      {
         open: 10,
         close: 20,
       },
-      wednesday: {
+      {
         open: 10,
         close: 20,
       },
-      thursday: {
+      {
         open: 10,
         close: 20,
       },
-      friday: {
+      {
         open: 10,
         close: 20,
       },
-      saturday: {
+      {
         open: 10,
         close: 20,
       },
-    },
+    ],
     lat: "34.73889731200156",
     lng: "-92.34197102973047",
     active: false,
@@ -223,36 +281,37 @@ export const locations = [
       "Mon - Thurs: 9am - 8pm",
       "Fri & Sat: 9am - 9pm",
     ],
-    hoursLong: {
-      sunday: {
+    hoursLong: [
+      // Sun -> Sat
+      {
         open: 11,
         close: 19,
       },
-      monday: {
+      {
         open: 9,
         close: 20,
       },
-      tuesday: {
+      {
         open: 9,
         close: 20,
       },
-      wednesday: {
+      {
         open: 9,
         close: 20,
       },
-      thursday: {
+      {
         open: 9,
         close: 20,
       },
-      friday: {
+      {
         open: 9,
         close: 21,
       },
-      saturday: {
+      {
         open: 9,
         close: 21,
       },
-    },
+    ],
     lat: "34.65672750263045",
     lng: "-92.42679890133392",
     active: false,
@@ -278,36 +337,37 @@ export const locations = [
       "Mon - Thurs: 9am - 8pm",
       "Fri & Sat: 9am - 9pm",
     ],
-    hoursLong: {
-      sunday: {
+    hoursLong: [
+      // Sun -> Sat
+      {
         open: 12,
         close: 19,
       },
-      monday: {
+      {
         open: 9,
         close: 20,
       },
-      tuesday: {
+      {
         open: 9,
         close: 20,
       },
-      wednesday: {
+      {
         open: 9,
         close: 20,
       },
-      thursday: {
+      {
         open: 9,
         close: 20,
       },
-      friday: {
+      {
         open: 9,
         close: 21,
       },
-      saturday: {
+      {
         open: 9,
         close: 21,
       },
-    },
+    ],
     lat: "34.943645606008616",
     lng: "-92.00911183761357",
     active: false,
@@ -333,36 +393,37 @@ export const locations = [
       "Mon - Thurs: 9am - 8pm",
       "Fri & Sat: 9am - 9pm",
     ],
-    hoursLong: {
-      sunday: {
+    hoursLong: [
+      // Sun -> Sat
+      {
         open: 12,
         close: 19,
       },
-      monday: {
+      {
         open: 9,
         close: 20,
       },
-      tuesday: {
+      {
         open: 9,
         close: 20,
       },
-      wednesday: {
+      {
         open: 9,
         close: 20,
       },
-      thursday: {
+      {
         open: 9,
         close: 20,
       },
-      friday: {
+      {
         open: 9,
         close: 21,
       },
-      saturday: {
+      {
         open: 9,
         close: 21,
       },
-    },
+    ],
     lat: "34.83185459399566",
     lng: "-92.18920150531893",
     active: false,
@@ -388,36 +449,37 @@ export const locations = [
       "Mon - Thurs: 9am - 8pm",
       "Fri & Sat: 9am - 9pm",
     ],
-    hoursLong: {
-      sunday: {
+    hoursLong: [
+      // Sun -> Sat
+      {
         open: 11,
         close: 19,
       },
-      monday: {
+      {
         open: 9,
         close: 20,
       },
-      tuesday: {
+      {
         open: 9,
         close: 20,
       },
-      wednesday: {
+      {
         open: 9,
         close: 20,
       },
-      thursday: {
+      {
         open: 9,
         close: 20,
       },
-      friday: {
+      {
         open: 9,
         close: 21,
       },
-      saturday: {
+      {
         open: 9,
         close: 21,
       },
-    },
+    ],
     lat: "34.86841286319381",
     lng: "-92.11741122422272",
     active: false,
@@ -443,36 +505,37 @@ export const locations = [
       "Mon - Thurs: 9am - 8pm",
       "Fri & Sat: 9am - 9pm",
     ],
-    hoursLong: {
-      sunday: {
+    hoursLong: [
+      // Sun -> Sat
+      {
         open: 12,
         close: 19,
       },
-      monday: {
+      {
         open: 9,
         close: 20,
       },
-      tuesday: {
+      {
         open: 9,
         close: 20,
       },
-      wednesday: {
+      {
         open: 9,
         close: 20,
       },
-      thursday: {
+      {
         open: 9,
         close: 20,
       },
-      friday: {
+      {
         open: 9,
         close: 21,
       },
-      saturday: {
+      {
         open: 9,
         close: 21,
       },
-    },
+    ],
     lat: "33.46111546617134",
     lng: "-94.03023398328624",
     active: false,

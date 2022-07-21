@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Modal from "react-modal"
 import { Carousel } from "react-responsive-carousel"
-import { ImageGalleryContainer } from "../elements"
+import { ImageGalleryContainer } from "../css"
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement("#___gatsby")
